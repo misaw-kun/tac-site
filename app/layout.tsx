@@ -1,15 +1,8 @@
 import type { Metadata } from "next";
-import { Inter, Share_Tech } from "next/font/google";
-import localFont from "next/font/local";
-import "./globals.css";
 import { cn } from "@/lib/utils";
-
-// const inter = Inter({ subsets: ["latin"] });
-const share_tech = Share_Tech({
-  weight: "400",
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
+import "./globals.css";
+import "./styles.css";
+import { share_tech } from "./fonts";
 
 export const metadata: Metadata = {
   title: "The Automation Co.",
