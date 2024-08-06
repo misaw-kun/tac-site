@@ -6,7 +6,7 @@ export default function TypeEffect() {
     <Typewriter
       options={{
         strings: [
-          "actually works",
+          "actually work",
           "set appointments",
           "increases efficiency",
           "adapt to your needs",

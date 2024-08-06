@@ -1,6 +1,11 @@
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { BotMessageSquare } from "lucide-react";
+import {
+  BotMessageSquare,
+  BrainCircuit,
+  CalendarCheck,
+  MessagesSquare,
+} from "lucide-react";
 import { GeistSans } from "./fonts";
 import Marquee from "react-fast-marquee";
 import TypeEffect from "@/components/type-effect";
@@ -18,9 +23,7 @@ export default function Home() {
           <h1 className="scroll-m-20 text-3xl font-extrabold lg:text-4xl uppercase text-neutral-300">
             The Automation Co.
           </h1>
-          <Button
-            className={cn("text-md hover:bg-accent", GeistSans.className)}
-          >
+          <Button className={cn("text-md hover:bg-accent")}>
             <BotMessageSquare className="mr-2 h-4 w-4" /> Contact
           </Button>
         </div>
@@ -30,8 +33,7 @@ export default function Home() {
         <section className="relative flex flex-col w-full h-96 justify-center overflow-hidden lg:p-24 border border-white border-opacity-10 items-center">
           <h1
             className={cn(
-              "scroll-m-20 text-4xl font-medium lg:text-6xl pt-6 tracking-tighter z-10",
-              GeistSans.className
+              "scroll-m-20 text-4xl font-semibold lg:text-7xl pt-6 tracking-tight z-10"
             )}
           >
             <AnimatedShinyText
@@ -54,57 +56,74 @@ export default function Home() {
             y={-1}
             className="[mask-image:radial-gradient(900px_circle_at_center,transparent,white)]"
           />
+          <h2
+            className={cn("text-4xl font-medium text-center text-neutral-300")}
+          >
+            The Automation Company is an{" "}
+            <span className="mx-auto bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent font-bold">
+              AI Agency
+            </span>
+          </h2>
           <p
             className={cn(
-              "text-2xl leading-10 [&:not(:first-child)]:mt-6 tracking-normal text-center text-neutral-500",
-              GeistSans.className
+              "text-2xl leading-10 [&:not(:first-child)]:mt-3 tracking-normal text-center text-neutral-500"
             )}
           >
-            The Automation Company is an AI agency that provides
-            state-of-the-art solutions from the bleeding edge of technology. Our
-            team, fueled by creativity and passion, is committed to transforming
-            your business through seamless automation and exceptional customer
-            service. Discover the power of AI with solutions that are tailored
-            to your unique needs and designed to drive your success.
+            that provides state-of-the-art solutions from the bleeding edge of
+            technology.
           </p>
         </section>
         <section className="border border-white border-opacity-10 pt-3"></section>
         {/* marquee + USP section */}
-        <section className="flex flex-col w-full justify-center overflow-hidden border lg:py-16 border-white border-opacity-10">
+        <section className="flex flex-col w-full justify-center overflow-hidden border lg:py-14 border-white border-opacity-10">
           <Marquee
             speed={150}
             className={cn(
-              "text-4xl md:text-5xl lg:text-7xl font-bold overflow-hidden tracking-normal text-neutral-300"
+              "text-4xl md:text-5xl lg:text-6xl font-bold overflow-hidden tracking-normal text-neutral-300"
             )}
           >
-            <span className="mr-12 hover:text-secondary">
+            <span className="mr-12 hover:bg-gradient-to-r from-secondary to-accent hover:bg-clip-text hover:text-transparent">
               01. Seamless CRM Integration
             </span>
             <span className="lg:mr-12 md:mr-8 mr-6">/</span>
-            <span className="mr-12 hover:text-secondary">
+            <span className="mr-12 hover:bg-gradient-to-r from-secondary to-accent hover:bg-clip-text hover:text-transparent">
               02. 24/7 Availability
             </span>
             <span className="lg:mr-12 md:mr-8 mr-6">/</span>
-            <span className="mr-12 hover:text-secondary">
+            <span className="mr-12 hover:bg-gradient-to-r from-secondary to-accent hover:bg-clip-text hover:text-transparent">
               03. Secure and Compliant
             </span>
             <span className="lg:mr-12 md:mr-8 mr-6">/</span>
-            <span className="mr-12 hover:text-secondary">
+            <span className="mr-12 hover:bg-gradient-to-r from-secondary to-accent hover:bg-clip-text hover:text-transparent">
               04. Customizable and Scalable
             </span>
             <span className="lg:mr-12 md:mr-8 mr-6">/</span>
           </Marquee>
-          <div className="mt-16 columns-2 gap-0">
-            <div className="border-r border-t border-b border-white border-opacity-10 p-12">
-              <h3 className="text-xl text-neutral-400">
+          <div className="mt-16 columns-2 gap-0 flex">
+            <div className="border-r border-t border-b border-white border-opacity-10 p-12 flex-1">
+              <h3 className="text-xl text-neutral-500 flex items-center gap-2">
+                <CalendarCheck className="inline" size={20} />
                 From manual scheduling
               </h3>
-              <h2 className="text-2xl pt-2">
-                to AI-powered efficiency, in seconds.
+              <h2 className="text-2xl pt-2 text-neutral-400">
+                To{" "}
+                <span className="mx-auto text-neutral-200">
+                  {" "}
+                  AI-powered efficiency, in seconds.
+                </span>
               </h2>
             </div>
-            <div className="p-12 border-t border-b border-white border-opacity-10">
-              world
+            <div className="border-r border-t border-b border-white border-opacity-10 p-12 flex-1">
+              <h3 className="text-xl text-neutral-500 flex items-center gap-2">
+                <MessagesSquare className="inline" size={20} />
+                Every interaction is streamlined
+              </h3>
+              <h2 className="text-2xl pt-2 text-neutral-400">
+                Work with our team on{" "}
+                <span className="mx-auto text-neutral-200">
+                  real, tangible AI solutions, not just buzzwords.
+                </span>
+              </h2>
             </div>
           </div>
         </section>
