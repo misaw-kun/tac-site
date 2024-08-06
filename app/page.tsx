@@ -69,8 +69,8 @@ export default function Home() {
           </p>
         </section>
         <section className="border border-white border-opacity-10 pt-3"></section>
-        {/* marquee section */}
-        <section className="flex flex-col w-full justify-center overflow-hidden border lg:py-20 border-white border-opacity-10">
+        {/* marquee + USP section */}
+        <section className="flex flex-col w-full justify-center overflow-hidden border lg:py-16 border-white border-opacity-10">
           <Marquee
             speed={150}
             className={cn(
@@ -94,10 +94,13 @@ export default function Home() {
             </span>
             <span className="lg:mr-12 md:mr-8 mr-6">/</span>
           </Marquee>
-          <div className="mt-5 columns-2 gap-0">
+          <div className="mt-16 columns-2 gap-0">
             <div className="border-r border-t border-b border-white border-opacity-10 p-12">
-              <h2 className="text-2xl">
-                From manual scheduling to AI-powered efficiency, in seconds.
+              <h3 className="text-xl text-neutral-400">
+                From manual scheduling
+              </h3>
+              <h2 className="text-2xl pt-2">
+                to AI-powered efficiency, in seconds.
               </h2>
             </div>
             <div className="p-12 border-t border-b border-white border-opacity-10">

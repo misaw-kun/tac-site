@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased container",
+          "min-h-screen bg-background font-sans antialiased container lg:max-w-screen-lg",
           share_tech.variable
         )}
       >
