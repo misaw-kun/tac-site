@@ -6,16 +6,17 @@ export default function TypeEffect() {
     <Typewriter
       options={{
         strings: [
-          "actually work",
-          "integrate with your CRM",
+          "actually works",
           "set appointments",
-          "increase efficiency",
+          "increases efficiency",
           "adapt to your needs",
+          "boosts revenue",
+          "run 24/7",
         ],
         autoStart: true,
         loop: true,
-        delay: 50,
-        deleteSpeed: 30,
+        delay: 75,
+        deleteSpeed: 10,
       }}
     />
   );
