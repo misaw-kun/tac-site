@@ -16,6 +16,7 @@ import AnimatedShinyText from "@/components/magicui/animated-shiny-text";
 import { VelocityScroll } from "@/components/magicui/scroll-based-velocity";
 import Image from "next/image";
 import Logo from "./assets/logo.svg";
+import Particles from "@/components/magicui/particles";
 
 export default function Home() {
   return (
@@ -33,7 +34,7 @@ export default function Home() {
       </header>
       <main className="flex flex-col justify-between">
         {/* hero */}
-        <section className="relative flex flex-col w-full h-96 justify-center overflow-hidden lg:p-24 border border-white border-opacity-10 items-center">
+        <section className="relative flex flex-col w-full h-96 justify-center overflow-hidden lg:p-24 border border-white border-opacity-15 items-center">
           <h1
             className={cn(
               "scroll-m-20 text-4xl font-bold lg:text-6xl pt-6 tracking-tight z-10"
@@ -49,15 +50,22 @@ export default function Home() {
               <TypeEffect />
             </div>
           </h1>
+          <Particles
+            className="absolute inset-0"
+            quantity={100}
+            ease={80}
+            color="#fff"
+            refresh
+          />
         </section>
         {/* biz desc */}
-        <section className="relative flex flex-col w-full justify-center overflow-hidden lg:p-24 border border-white border-opacity-10">
+        <section className="relative flex flex-col w-full justify-center overflow-hidden lg:p-24 border border-white border-opacity-15">
           <GridPattern
             width={96}
             height={96}
             x={-1}
             y={-1}
-            className="[mask-image:radial-gradient(900px_circle_at_center,transparent,white)]"
+            className="[mask-image:radial-gradient(600px_circle_at_center,transparent,white)]"
           />
           <h2
             className={cn("text-4xl font-medium text-center text-neutral-300")}
@@ -76,13 +84,13 @@ export default function Home() {
             technology.
           </p>
         </section>
-        <section className="border border-white border-opacity-10 pt-3"></section>
+        <section className="border border-white border-opacity-15 pt-3"></section>
         {/* marquee + USP section */}
-        <section className="flex flex-col w-full justify-center border lg:py-14 border-white border-opacity-10">
+        <section className="flex flex-col w-full justify-center border lg:py-14 border-white border-opacity-15">
           <Marquee
             speed={150}
             className={cn(
-              "text-4xl md:text-5xl lg:text-6xl font-bold tracking-normal text-neutral-300 min-h-full overflow-hidden"
+              "text-4xl md:text-5xl lg:text-6xl font-bold tracking-normal text-neutral-300 overflow-hidden min-h-20"
             )}
           >
             <span className="mr-12 hover:bg-gradient-to-r from-secondary to-accent hover:bg-clip-text hover:text-transparent">
@@ -103,7 +111,7 @@ export default function Home() {
             <span className="lg:mr-12 md:mr-8 mr-6">/</span>
           </Marquee>
           <div className="mt-16 columns-2 gap-0 flex">
-            <div className="border-r border-t border-b border-white border-opacity-10 p-12 flex-1">
+            <div className="border-r border-t border-b border-white border-opacity-15 p-12 flex-1">
               <h3 className="text-xl font-semibold text-neutral-500 flex items-center gap-2">
                 <CalendarCheck className="inline" size={20} />
                 From manual scheduling
@@ -116,7 +124,7 @@ export default function Home() {
                 </span>
               </h2>
             </div>
-            <div className="border-r border-t border-b border-white border-opacity-10 p-12 flex-1">
+            <div className="border-r border-t border-b border-white border-opacity-15 p-12 flex-1">
               <h3 className="text-xl font-semibold text-neutral-500 flex items-center gap-2">
                 <MessagesSquare className="inline" size={20} />
                 Every interaction is streamlined
