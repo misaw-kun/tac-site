@@ -1,43 +1,31 @@
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import {
-  BotMessageSquare,
-  BrainCircuit,
-  CalendarCheck,
-  MessagesSquare,
-} from "lucide-react";
-import { GeistSans } from "./fonts";
+import { BotMessageSquare, CalendarCheck, MessagesSquare } from "lucide-react";
 import Marquee from "react-fast-marquee";
 import TypeEffect from "@/components/type-effect";
 import GridPattern from "@/components/ui/grid-pattern";
-import Ripple from "@/components/magicui/ripple";
-import DotPattern from "@/components/magicui/dot-pattern";
 import AnimatedShinyText from "@/components/magicui/animated-shiny-text";
-import { VelocityScroll } from "@/components/magicui/scroll-based-velocity";
 import Image from "next/image";
 import Logo from "./assets/logo.svg";
 import Particles from "@/components/magicui/particles";
+import ShimmerButton from "@/components/magicui/shimmer-button";
+import WordRotate from "@/components/magicui/word-rotate";
 
 export default function Home() {
   return (
     <>
       <header className="pb-7 pt-5 md:pb-10 md:pt-8 lg:pb-14 lg:pt-12 w-full">
         <div className="flex items-center justify-between">
-          {/* <h1 className="scroll-m-20 text-3xl font-extrabold lg:text-4xl uppercase text-neutral-300">
-            The Automation Co.
-          </h1> */}
-          <Image src={Logo} alt="brand-logo" width={256} height={64} />
-          <Button className={cn("text-md hover:bg-accent")}>
-            <BotMessageSquare className="mr-2 h-4 w-4" /> Contact
-          </Button>
+          <Image src={Logo} alt="brand-logo" />
+          <Button className="text-lg p-6">Contact Us</Button>
         </div>
       </header>
       <main className="flex flex-col justify-between">
         {/* hero */}
-        <section className="relative flex flex-col w-full h-96 justify-center overflow-hidden lg:p-24 border border-white border-opacity-15 items-center">
+        <section className="relative flex flex-col w-full h-fit justify-center overflow-hidden lg:p-24 border border-white border-opacity-15 items-center">
           <h1
             className={cn(
-              "scroll-m-20 text-4xl font-bold lg:text-6xl pt-6 tracking-tight z-10"
+              "scroll-m-20 text-4xl font-bold lg:text-5xl pt-6 tracking-tight z-10"
             )}
           >
             <AnimatedShinyText
@@ -46,20 +34,35 @@ export default function Home() {
             >
               AI powered solutions that
             </AnimatedShinyText>
-            <div className="text-center mt-5 bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent min-h-full">
-              <TypeEffect />
-            </div>
+            {/* <TypeEffect /> */}
+            <WordRotate
+              words={[
+                "actually work",
+                "set appointments",
+                "increases efficiency",
+                "adapt to your needs",
+                "boosts revenue",
+                "runs 24/7",
+              ]}
+              className="text-center mt-3 bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent min-h-36"
+            />
           </h1>
+          <ShimmerButton className="shadow-2xl  mt-10 z-20">
+            <BotMessageSquare className="mr-2 h-4 w-4" />
+            <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
+              Start Automating
+            </span>
+          </ShimmerButton>
           <Particles
             className="absolute inset-0"
-            quantity={100}
-            ease={80}
+            quantity={256}
+            ease={10}
             color="#fff"
             refresh
           />
         </section>
         {/* biz desc */}
-        <section className="relative flex flex-col w-full justify-center overflow-hidden lg:p-24 border border-white border-opacity-15">
+        <section className="relative flex flex-col w-full justify-center overflow-hidden lg:py-24 border border-white border-opacity-15">
           <GridPattern
             width={96}
             height={96}
@@ -71,15 +74,11 @@ export default function Home() {
             className={cn("text-4xl font-medium text-center text-neutral-300")}
           >
             The Automation Company is an{" "}
-            <span className="mx-auto bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent font-bold">
+            <span className="mx-auto bg-gradient-to-b from-secondary to-accent bg-clip-text text-transparent font-bold">
               AI Agency
             </span>
           </h2>
-          <p
-            className={cn(
-              "text-2xl leading-10 [&:not(:first-child)]:mt-3 tracking-normal text-center text-neutral-500"
-            )}
-          >
+          <p className="text-2xl leading-10 [&:not(:first-child)]:mt-3 tracking-normal text-center text-neutral-500">
             that provides state-of-the-art solutions from the bleeding edge of
             technology.
           </p>
