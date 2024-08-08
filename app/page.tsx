@@ -2,7 +2,6 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { BotMessageSquare, CalendarCheck, MessagesSquare } from "lucide-react";
 import Marquee from "react-fast-marquee";
-import TypeEffect from "@/components/type-effect";
 import GridPattern from "@/components/ui/grid-pattern";
 import AnimatedShinyText from "@/components/magicui/animated-shiny-text";
 import Image from "next/image";
@@ -10,10 +9,13 @@ import Logo from "./assets/logo.svg";
 import Particles from "@/components/magicui/particles";
 import ShimmerButton from "@/components/magicui/shimmer-button";
 import WordRotate from "@/components/magicui/word-rotate";
+import BoxReveal from "@/components/magicui/box-reveal";
+import TextRevealByWord from "@/components/magicui/text-reveal";
+import BlurFade from "@/components/magicui/blur-fade";
 
 export default function Home() {
   return (
-    <>
+    <BlurFade delay={0.25} inView>
       <header className="pb-7 pt-5 md:pb-10 md:pt-8 lg:pb-14 lg:pt-12 w-full">
         <div className="flex items-center justify-between">
           <Image src={Logo} alt="brand-logo" />
@@ -62,7 +64,7 @@ export default function Home() {
           />
         </section>
         {/* biz desc */}
-        <section className="relative flex flex-col w-full justify-center overflow-hidden lg:py-24 border border-white border-opacity-15">
+        <section className="relative flex flex-col w-full justify-center overflow-hidden lg:py-24 border border-white border-opacity-15 border-t-0 border-b-0">
           <GridPattern
             width={96}
             height={96}
@@ -83,9 +85,9 @@ export default function Home() {
             technology.
           </p>
         </section>
-        <section className="border border-white border-opacity-15 pt-3"></section>
+        <section className="border border-white border-opacity-15 pt-3 bg-neutral-900"></section>
         {/* marquee + USP section */}
-        <section className="flex flex-col w-full justify-center border lg:py-14 border-white border-opacity-15">
+        <section className="flex flex-col w-full justify-center border lg:pt-14 border-white border-opacity-15 border-b-0 border-t-0">
           <Marquee
             speed={150}
             className={cn(
@@ -109,35 +111,45 @@ export default function Home() {
             </span>
             <span className="lg:mr-12 md:mr-8 mr-6">/</span>
           </Marquee>
+          {/* yap */}
           <div className="mt-16 columns-2 gap-0 flex">
-            <div className="border-r border-t border-b border-white border-opacity-15 p-12 flex-1">
+            <div className="border-r border-t border-white border-opacity-15 p-12 flex-1">
               <h3 className="text-xl font-semibold text-neutral-500 flex items-center gap-2">
                 <CalendarCheck className="inline" size={20} />
                 From manual scheduling
               </h3>
-              <h2 className="text-2xl font-semibold pt-2 text-neutral-400">
-                To{" "}
-                <span className="mx-auto text-neutral-200">
-                  {" "}
-                  AI-powered efficiency, in seconds.
-                </span>
-              </h2>
+              <BoxReveal boxColor="#fff">
+                <h2 className="text-2xl font-semibold pt-2 text-neutral-400">
+                  To{" "}
+                  <span className="mx-auto text-neutral-200">
+                    {" "}
+                    AI-powered efficiency, in seconds.
+                  </span>
+                </h2>
+              </BoxReveal>
             </div>
-            <div className="border-r border-t border-b border-white border-opacity-15 p-12 flex-1">
+            <div className="border-t border-white border-opacity-15 p-12 flex-1">
               <h3 className="text-xl font-semibold text-neutral-500 flex items-center gap-2">
                 <MessagesSquare className="inline" size={20} />
                 Every interaction is streamlined
               </h3>
-              <h2 className="text-2xl font-semibold pt-2 text-neutral-400">
-                Work with our team on{" "}
-                <span className="mx-auto text-neutral-200">
-                  tangible AI solutions, not just buzzwords.
-                </span>
-              </h2>
+              <BoxReveal boxColor="#fff">
+                <h2 className="text-2xl font-semibold pt-2 text-neutral-400">
+                  Work with our team on{" "}
+                  <span className="mx-auto text-neutral-200">
+                    tangible AI solutions, not just buzzwords.
+                  </span>
+                </h2>
+              </BoxReveal>
             </div>
           </div>
         </section>
+        <section className="border border-white border-opacity-15 pt-3 bg-neutral-900"></section>
+        {/* reveal section */}
+        <section className="z-10 flex min-h-[16rem] items-center justify-center border border-white border-opacity-15 pt-3">
+          <TextRevealByWord text="Streamline Engagement, Support and Sales Like Never Before" />
+        </section>
       </main>
-    </>
+    </BlurFade>
   );
 }

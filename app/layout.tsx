@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased container lg:max-w-screen-lg xl:max-w-screen-xl",
+          "min-h-screen bg-background font-sans antialiased container lg:max-w-screen-lg",
           satoshi.variable
         )}
       >
