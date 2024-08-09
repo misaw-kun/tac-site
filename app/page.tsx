@@ -15,7 +15,7 @@ import BlurFade from "@/components/magicui/blur-fade";
 
 export default function Home() {
   return (
-    <BlurFade delay={0.25} inView>
+    <BlurFade delay={0.25} inView={true}>
       <header className="pb-7 pt-5 md:pb-10 md:pt-8 lg:pb-14 lg:pt-12 w-full">
         <div className="flex items-center justify-between">
           <Image src={Logo} alt="brand-logo" />
@@ -46,7 +46,7 @@ export default function Home() {
                 "boosts revenue",
                 "runs 24/7",
               ]}
-              className="text-center mt-3 bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent min-h-36"
+              className="text-center mt-3 bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent min-h-32"
             />
           </h1>
           <ShimmerButton className="shadow-2xl  mt-10 z-20">
