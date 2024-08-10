@@ -1,7 +1,6 @@
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { BotMessageSquare, CalendarCheck, MessagesSquare } from "lucide-react";
-import Marquee from "react-fast-marquee";
 import GridPattern from "@/components/ui/grid-pattern";
 import AnimatedShinyText from "@/components/magicui/animated-shiny-text";
 import Image from "next/image";
@@ -12,6 +11,9 @@ import WordRotate from "@/components/magicui/word-rotate";
 import BoxReveal from "@/components/magicui/box-reveal";
 import TextRevealByWord from "@/components/magicui/text-reveal";
 import BlurFade from "@/components/magicui/blur-fade";
+import FeaturesGrid from "@/components/ui/features-grid";
+import DotPattern from "@/components/magicui/dot-pattern";
+import Metrics from "@/components/ui/metrics";
 
 export default function Home() {
   return (
@@ -19,15 +21,15 @@ export default function Home() {
       <header className="pb-7 pt-5 md:pb-10 md:pt-8 lg:pb-14 lg:pt-12 w-full">
         <div className="flex items-center justify-between">
           <Image src={Logo} alt="brand-logo" />
-          <Button className="text-lg p-6">Contact Us</Button>
+          <Button className="text-lg p-6 hover:bg-accent">Contact Us</Button>
         </div>
       </header>
       <main className="flex flex-col justify-between">
         {/* hero */}
-        <section className="relative flex flex-col w-full h-fit justify-center overflow-hidden lg:p-24 border border-white border-opacity-15 items-center">
+        <section className="relative flex flex-col w-full h-[784px] justify-center overflow-hidden lg:p-24 border border-white border-opacity-15 items-center">
           <h1
             className={cn(
-              "scroll-m-20 text-4xl font-bold lg:text-5xl pt-6 tracking-tight z-10"
+              "scroll-m-20 text-4xl font-bold lg:text-6xl tracking-tight z-10"
             )}
           >
             <AnimatedShinyText
@@ -49,9 +51,9 @@ export default function Home() {
               className="text-center mt-3 bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent min-h-32"
             />
           </h1>
-          <ShimmerButton className="shadow-2xl  mt-10 z-20">
+          <ShimmerButton className="shadow-2xl mt-10 z-20">
             <BotMessageSquare className="mr-2 h-4 w-4" />
-            <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
+            <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white from-white to-slate-900/10 lg:text-lg">
               Start Automating
             </span>
           </ShimmerButton>
@@ -72,6 +74,7 @@ export default function Home() {
             y={-1}
             className="[mask-image:radial-gradient(600px_circle_at_center,transparent,white)]"
           />
+
           <h2
             className={cn("text-4xl font-medium text-center text-neutral-300")}
           >
@@ -85,70 +88,62 @@ export default function Home() {
             technology.
           </p>
         </section>
-        <section className="border border-white border-opacity-15 pt-3 bg-neutral-900"></section>
-        {/* marquee + USP section */}
-        <section className="flex flex-col w-full justify-center border lg:pt-14 border-white border-opacity-15 border-b-0 border-t-0">
-          <Marquee
-            speed={150}
-            className={cn(
-              "text-4xl md:text-5xl lg:text-6xl font-bold tracking-normal text-neutral-300 overflow-hidden min-h-20"
-            )}
-          >
-            <span className="mr-12 hover:bg-gradient-to-r from-secondary to-accent hover:bg-clip-text hover:text-transparent">
-              01. Seamless CRM Integration
-            </span>
-            <span className="lg:mr-12 md:mr-8 mr-6">/</span>
-            <span className="mr-12 hover:bg-gradient-to-r from-secondary to-accent hover:bg-clip-text hover:text-transparent">
-              02. 24/7 Availability
-            </span>
-            <span className="lg:mr-12 md:mr-8 mr-6">/</span>
-            <span className="mr-12 hover:bg-gradient-to-r from-secondary to-accent hover:bg-clip-text hover:text-transparent">
-              03. Secure and Compliant
-            </span>
-            <span className="lg:mr-12 md:mr-8 mr-6">/</span>
-            <span className="mr-12 hover:bg-gradient-to-r from-secondary to-accent hover:bg-clip-text hover:text-transparent">
-              04. Customizable and Scalable
-            </span>
-            <span className="lg:mr-12 md:mr-8 mr-6">/</span>
-          </Marquee>
-          {/* yap */}
-          <div className="mt-16 columns-2 gap-0 flex">
-            <div className="border-r border-t border-white border-opacity-15 p-12 flex-1">
-              <h3 className="text-xl font-semibold text-neutral-500 flex items-center gap-2">
-                <CalendarCheck className="inline" size={20} />
-                From manual scheduling
-              </h3>
-              <BoxReveal boxColor="#fff">
-                <h2 className="text-2xl font-semibold pt-2 text-neutral-400">
-                  To{" "}
-                  <span className="mx-auto text-neutral-200">
-                    {" "}
-                    AI-powered efficiency, in seconds.
-                  </span>
-                </h2>
-              </BoxReveal>
-            </div>
-            <div className="border-t border-white border-opacity-15 p-12 flex-1">
-              <h3 className="text-xl font-semibold text-neutral-500 flex items-center gap-2">
-                <MessagesSquare className="inline" size={20} />
-                Every interaction is streamlined
-              </h3>
-              <BoxReveal boxColor="#fff">
-                <h2 className="text-2xl font-semibold pt-2 text-neutral-400">
-                  Work with our team on{" "}
-                  <span className="mx-auto text-neutral-200">
-                    tangible AI solutions, not just buzzwords.
-                  </span>
-                </h2>
-              </BoxReveal>
-            </div>
-          </div>
-        </section>
-        <section className="border border-white border-opacity-15 pt-3 bg-neutral-900"></section>
         {/* reveal section */}
-        <section className="z-10 flex min-h-[16rem] items-center justify-center border border-white border-opacity-15 pt-3">
+        <section className="z-10 flex min-h-[16rem] items-center justify-center border border-white border-opacity-15 pt-3 border-b-0">
           <TextRevealByWord text="Streamline Engagement, Support and Sales Like Never Before" />
         </section>
+        {/* yap */}
+        <section className="flex w-full justify-center border border-white border-opacity-15 border-b-0 border-t-0 columns-2 gap-0">
+          <div className="border-r border-t border-white border-opacity-15 p-12 flex-1">
+            <h3 className="text-xl font-semibold text-neutral-500 flex items-center gap-2">
+              <CalendarCheck className="inline" size={20} />
+              From manual scheduling
+            </h3>
+            <BoxReveal boxColor="#fff">
+              <h2 className="text-2xl font-semibold pt-2 text-neutral-400">
+                To{" "}
+                <span className="mx-auto text-neutral-200">
+                  {" "}
+                  AI-powered efficiency, in seconds.
+                </span>
+              </h2>
+            </BoxReveal>
+          </div>
+          <div className="border-t border-white border-opacity-15 p-12 flex-1">
+            <h3 className="text-xl font-semibold text-neutral-500 flex items-center gap-2">
+              <MessagesSquare className="inline" size={20} />
+              Every interaction is streamlined
+            </h3>
+            <BoxReveal boxColor="#fff">
+              <h2 className="text-2xl font-semibold pt-2 text-neutral-400">
+                Work with our team on{" "}
+                <span className="mx-auto text-neutral-200">
+                  tangible AI solutions, not just buzzwords.
+                </span>
+              </h2>
+            </BoxReveal>
+          </div>
+        </section>
+        {/* benefits */}
+        <section className="relative overflow-hidden lg:py-20 lg:px-12 border border-white border-opacity-15">
+          <FeaturesGrid />
+          <DotPattern
+            className={cn(
+              "[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]"
+            )}
+          />
+        </section>
+        {/* metrics */}
+        <section className="border border-white border-opacity-15 lg:p-24">
+          <h2 className="scroll-m-20 pb-2 text-4xl font-bold tracking-tight first:mt-0">
+            AI In Action
+          </h2>
+          <p className="text-2xl leading-10 [&:not(:first-child)]:mt-3 tracking-normal text-neutral-500">
+            Success stories from the industry you can trust
+          </p>
+          <Metrics />
+        </section>
+        {/* <div className="border border-t-0 border-white border-opacity-10 pt-3 bg-neutral-900"></div> */}
       </main>
     </BlurFade>
   );
