@@ -83,7 +83,7 @@ export default function Home() {
               AI Agency
             </span>
           </h2>
-          <p className="text-2xl leading-10 [&:not(:first-child)]:mt-3 tracking-normal text-center text-neutral-500">
+          <p className="text-2xl leading-10 [&:not(:first-child)]:mt-3 tracking-normal text-center text-neutral-400">
             that provides state-of-the-art solutions from the bleeding edge of
             technology.
           </p>
@@ -138,10 +138,15 @@ export default function Home() {
           <h2 className="scroll-m-20 pb-2 text-4xl font-bold tracking-tight first:mt-0">
             AI In Action
           </h2>
-          <p className="text-2xl leading-10 [&:not(:first-child)]:mt-3 tracking-normal text-neutral-500">
+          <p className="text-2xl leading-10 [&:not(:first-child)]:mt-3 tracking-normal text-neutral-300">
             Success stories from the industry you can trust
           </p>
           <Metrics />
+          <p className="text-xl text-neutral-600">
+            *numbers are market-research backed data conducted by the individual
+            companies or other surveys, thereby, do not attribute to the
+            automation company in any manner.
+          </p>
         </section>
         {/* <div className="border border-t-0 border-white border-opacity-10 pt-3 bg-neutral-900"></div> */}
       </main>
