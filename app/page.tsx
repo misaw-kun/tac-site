@@ -14,24 +14,22 @@ import BlurFade from "@/components/magicui/blur-fade";
 import FeaturesGrid from "@/components/ui/features-grid";
 import DotPattern from "@/components/magicui/dot-pattern";
 import Metrics from "@/components/ui/metrics";
+import Meteors from "@/components/magicui/meteors";
+import CalendlyPopup from "@/components/ui/calendly-popup";
 
 export default function Home() {
   return (
     <BlurFade delay={0.25} inView={true}>
-      <header className="pb-7 pt-5 md:pb-10 md:pt-8 lg:pb-14 lg:pt-12 w-full">
+      <header className="lg:py-12 w-full">
         <div className="flex items-center justify-between">
           <Image src={Logo} alt="brand-logo" />
           <Button className="text-lg p-6 hover:bg-accent">Contact Us</Button>
         </div>
       </header>
-      <main className="flex flex-col justify-between">
+      <main className="snap-y flex flex-col justify-between">
         {/* hero */}
-        <section className="relative flex flex-col w-full h-[784px] justify-center overflow-hidden lg:p-24 border border-white border-opacity-15 items-center">
-          <h1
-            className={cn(
-              "scroll-m-20 text-4xl font-bold lg:text-6xl tracking-tight z-10"
-            )}
-          >
+        <section className="snap-start relative flex flex-col w-full h-[784px] justify-center overflow-hidden lg:p-24 items-center">
+          <h1 className="scroll-m-20 text-4xl font-bold lg:text-6xl tracking-tight z-10">
             <AnimatedShinyText
               className="max-w-full transition ease-out "
               shimmerWidth={200}
@@ -51,12 +49,7 @@ export default function Home() {
               className="text-center mt-3 bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent min-h-32"
             />
           </h1>
-          <ShimmerButton className="shadow-2xl mt-10 z-20">
-            <BotMessageSquare className="mr-2 h-4 w-4" />
-            <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white from-white to-slate-900/10 lg:text-lg">
-              Start Automating
-            </span>
-          </ShimmerButton>
+          <CalendlyPopup btnText="Start Automating" />
           <Particles
             className="absolute inset-0"
             quantity={256}
@@ -66,12 +59,10 @@ export default function Home() {
           />
         </section>
         {/* biz desc */}
-        <section className="relative flex flex-col w-full justify-center overflow-hidden lg:py-24 border border-white border-opacity-15 border-t-0 border-b-0">
+        <section className="snap-start relative flex flex-col w-full justify-center overflow-hidden lg:py-28 border border-white border-opacity-15">
           <GridPattern
-            width={96}
-            height={96}
-            x={-1}
-            y={-1}
+            width={64}
+            height={64}
             className="[mask-image:radial-gradient(600px_circle_at_center,transparent,white)]"
           />
 
@@ -89,12 +80,12 @@ export default function Home() {
           </p>
         </section>
         {/* reveal section */}
-        <section className="z-10 flex min-h-[16rem] items-center justify-center border border-white border-opacity-15 pt-3 border-b-0">
+        <section className="z-10 flex min-h-[16rem] items-center justify-center snap-start">
           <TextRevealByWord text="Streamline Engagement, Support and Sales Like Never Before" />
         </section>
         {/* yap */}
-        <section className="flex w-full justify-center border border-white border-opacity-15 border-b-0 border-t-0 columns-2 gap-0">
-          <div className="border-r border-t border-white border-opacity-15 p-12 flex-1">
+        <section className="snap-start flex w-full justify-center columns-2 border border-neutral-800">
+          <div className="border-r border-neutral-800 p-12 flex-1">
             <h3 className="text-xl font-semibold text-neutral-500 flex items-center gap-2">
               <CalendarCheck className="inline" size={20} />
               From manual scheduling
@@ -109,7 +100,7 @@ export default function Home() {
               </h2>
             </BoxReveal>
           </div>
-          <div className="border-t border-white border-opacity-15 p-12 flex-1">
+          <div className="p-12 flex-1">
             <h3 className="text-xl font-semibold text-neutral-500 flex items-center gap-2">
               <MessagesSquare className="inline" size={20} />
               Every interaction is streamlined
@@ -125,7 +116,7 @@ export default function Home() {
           </div>
         </section>
         {/* benefits */}
-        <section className="relative overflow-hidden lg:py-20 lg:px-12 border border-white border-opacity-15">
+        <section className="snap-start relative border border-neutral-800 overflow-hidden lg:px-16 lg:py-24 border-b-0">
           <FeaturesGrid />
           <DotPattern
             className={cn(
@@ -134,7 +125,7 @@ export default function Home() {
           />
         </section>
         {/* metrics */}
-        <section className="border border-white border-opacity-15 lg:p-24">
+        <section className="border border-neutral-800 relative snap-start lg:py-24 lg:px-16">
           <h2 className="scroll-m-20 pb-2 text-4xl font-bold tracking-tight first:mt-0">
             AI In Action
           </h2>
@@ -142,14 +133,37 @@ export default function Home() {
             Success stories from the industry you can trust
           </p>
           <Metrics />
-          <p className="text-xl text-neutral-600">
+          <p className="text-lg text-neutral-500">
             *numbers are market-research backed data conducted by the individual
-            companies or other surveys, thereby, do not attribute to the
-            automation company in any manner.
+            companies or other surveys,
+            <br /> thereby, do not attribute to The Automation Company in any
+            manner.
           </p>
+          <DotPattern
+            className={cn(
+              "[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]"
+            )}
+          />
         </section>
-        {/* <div className="border border-t-0 border-white border-opacity-10 pt-3 bg-neutral-900"></div> */}
+        {/* CTA */}
       </main>
+      <footer className="relative lg:py-40 lg:px-16 w-full flex justify-between border border-neutral-800 border-t-0 overflow-hidden min-h-72 items-center">
+        <div className="z-10">
+          <h1 className="font-bold lg:text-6xl tracking-normal mb-5 bg-gradient-to-br from-secondary to-accent bg-clip-text text-transparent">
+            Ready to Automate?
+          </h1>
+          <h2 className="lg:text-3xl font-semibold tracking-tight text-neutral-500">
+            <AnimatedShinyText
+              className="max-w-full transition ease-out"
+              shimmerWidth={200}
+            >
+              For businesses of the future
+            </AnimatedShinyText>
+          </h2>
+        </div>
+        <CalendlyPopup btnText="Book A Call" />
+        <Meteors number={30} />
+      </footer>
     </BlurFade>
   );
 }
