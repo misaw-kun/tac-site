@@ -1,12 +1,11 @@
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { BotMessageSquare, CalendarCheck, MessagesSquare } from "lucide-react";
+import { CalendarCheck, MessagesSquare } from "lucide-react";
 import GridPattern from "@/components/ui/grid-pattern";
 import AnimatedShinyText from "@/components/magicui/animated-shiny-text";
 import Image from "next/image";
 import Logo from "./assets/logo.svg";
 import Particles from "@/components/magicui/particles";
-import ShimmerButton from "@/components/magicui/shimmer-button";
 import WordRotate from "@/components/magicui/word-rotate";
 import BoxReveal from "@/components/magicui/box-reveal";
 import TextRevealByWord from "@/components/magicui/text-reveal";
@@ -16,6 +15,7 @@ import DotPattern from "@/components/magicui/dot-pattern";
 import Metrics from "@/components/ui/metrics";
 import Meteors from "@/components/magicui/meteors";
 import CalendlyPopup from "@/components/ui/calendly-popup";
+import AiPoweredOne from "@/app/assets/ai-sched-1.png";
 
 export default function Home() {
   return (
@@ -59,24 +59,19 @@ export default function Home() {
           />
         </section>
         {/* biz desc */}
-        <section className="snap-start relative flex flex-col w-full justify-center overflow-hidden lg:py-28 border border-white border-opacity-15">
+        <section className="snap-start relative flex flex-col w-full justify-center overflow-hidden lg:py-28">
           <GridPattern
-            width={64}
-            height={64}
-            className="[mask-image:radial-gradient(600px_circle_at_center,transparent,white)]"
+            width={32}
+            height={32}
+            className="[mask-image:radial-gradient(600px_circle_at_center,white,transparent)]"
           />
 
-          <h2
-            className={cn("text-4xl font-medium text-center text-neutral-300")}
-          >
-            The Automation Company is an{" "}
-            <span className="mx-auto bg-gradient-to-b from-secondary to-accent bg-clip-text text-transparent font-bold">
-              AI Agency
-            </span>
+          <h2 className="text-4xl text-center mx-auto bg-gradient-to-b from-secondary to-accent bg-clip-text text-transparent font-bold min-h-12">
+            The Automation Company is an AI Agency
           </h2>
           <p className="text-2xl leading-10 [&:not(:first-child)]:mt-3 tracking-normal text-center text-neutral-400">
-            that provides state-of-the-art solutions from the bleeding edge of
-            technology.
+            that provides the tools and integrations needed to <br /> automate,
+            optimize, and scale your business operations seamlessly.
           </p>
         </section>
         {/* reveal section */}
@@ -84,14 +79,14 @@ export default function Home() {
           <TextRevealByWord text="Streamline Engagement, Support and Sales Like Never Before" />
         </section>
         {/* yap */}
-        <section className="snap-start flex w-full justify-center columns-2 border border-neutral-800">
-          <div className="border-r border-neutral-800 p-12 flex-1">
+        <section className="flex flex-col py-24">
+          <div className="relative px-12 py-24 flex-1 self-start">
             <h3 className="text-xl font-semibold text-neutral-500 flex items-center gap-2">
               <CalendarCheck className="inline" size={20} />
               From manual scheduling
             </h3>
             <BoxReveal boxColor="#fff">
-              <h2 className="text-2xl font-semibold pt-2 text-neutral-400">
+              <h2 className="text-2xl font-semibold pt-2 text-neutral-400 mb-10">
                 To{" "}
                 <span className="mx-auto text-neutral-200">
                   {" "}
@@ -99,8 +94,22 @@ export default function Home() {
                 </span>
               </h2>
             </BoxReveal>
+            <BoxReveal boxColor="#c0c0c0">
+              <Image
+                src={AiPoweredOne}
+                width={576}
+                height={576}
+                alt="ai-powered-efficiency"
+                className="z-12"
+              />
+            </BoxReveal>
+            <GridPattern
+              width={32}
+              height={32}
+              className="[mask-image:radial-gradient(600px_circle_at_center,white,transparent)] opacity-70"
+            />
           </div>
-          <div className="p-12 flex-1">
+          <div className="px-12 py-24 flex-1 self-end">
             <h3 className="text-xl font-semibold text-neutral-500 flex items-center gap-2">
               <MessagesSquare className="inline" size={20} />
               Every interaction is streamlined
@@ -116,16 +125,19 @@ export default function Home() {
           </div>
         </section>
         {/* benefits */}
-        <section className="snap-start relative border border-neutral-800 overflow-hidden lg:px-16 lg:py-24 border-b-0">
+        <section className="snap-start relative overflow-hidden lg:py-24 lg:px-16">
+          <h2 className="pb-10 text-4xl font-bold tracking-tight first:mt-0">
+            The Automation Advantage
+          </h2>
           <FeaturesGrid />
           <DotPattern
             className={cn(
-              "[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]"
+              "[mask-image:radial-gradient(300px_circle_at_center,white,transparent)] opacity-40"
             )}
           />
         </section>
         {/* metrics */}
-        <section className="border border-neutral-800 relative snap-start lg:py-24 lg:px-16">
+        <section className="relative snap-start lg:py-24 lg:px-16">
           <h2 className="scroll-m-20 pb-2 text-4xl font-bold tracking-tight first:mt-0">
             AI In Action
           </h2>
@@ -139,17 +151,13 @@ export default function Home() {
             <br /> thereby, do not attribute to The Automation Company in any
             manner.
           </p>
-          <DotPattern
-            className={cn(
-              "[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]"
-            )}
-          />
+          <DotPattern className="[mask-image:radial-gradient(300px_circle_at_center,white,transparent)] opacity-30" />
         </section>
         {/* CTA */}
       </main>
-      <footer className="relative lg:py-40 lg:px-16 w-full flex justify-between border border-neutral-800 border-t-0 overflow-hidden min-h-72 items-center">
+      <footer className="relative lg:py-40 lg:px-16 w-full flex justify-between  overflow-hidden min-h-72 items-center">
         <div className="z-10">
-          <h1 className="font-bold lg:text-6xl tracking-normal mb-5 bg-gradient-to-br from-secondary to-accent bg-clip-text text-transparent">
+          <h1 className="font-bold lg:text-6xl tracking-normal mb-5 bg-gradient-to-b from-secondary to-accent bg-clip-text text-transparent">
             Ready to Automate?
           </h1>
           <h2 className="lg:text-3xl font-semibold tracking-tight text-neutral-500">

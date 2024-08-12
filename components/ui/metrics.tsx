@@ -82,7 +82,7 @@ const companyData = [
 export default function Metrics() {
   return (
     <div className="relative overflow-hidden h-[576px] w-full flex lg:py-20">
-      <Marquee pauseOnHover className="[--duration:15s]">
+      <Marquee pauseOnHover className="[--duration:20s]">
         {companyData.map((data) => (
           <MagicCard
             key={data.metric}

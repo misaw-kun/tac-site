@@ -4,6 +4,8 @@ import { FC, ReactNode, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 import { cn } from "@/lib/utils";
+import { CircleChevronDown } from "lucide-react";
+import AnimatedGridPattern from "./animated-grid-pattern";
 
 interface TextRevealByWordProps {
   text: string;
@@ -25,13 +27,13 @@ export const TextRevealByWord: FC<TextRevealByWordProps> = ({
     <div ref={targetRef} className={cn("relative z-0 h-[200vh]", className)}>
       <div
         className={
-          "sticky top-0 mx-auto flex h-[50%] max-w-4xl items-center bg-transparent px-[1rem] py-[5rem]"
+          "sticky top-0 mx-auto flex flex-col justify-around h-[50%] max-w-4xl items-center bg-transparent px-[1rem] py-[5rem]"
         }
       >
         <p
           ref={targetRef}
           className={
-            "flex flex-wrap p-5 text-2xl font-bold text-white/20 dark:text-black/20 md:p-8 md:text-3xl lg:p-10 lg:text-4xl xl:text-5xl"
+            "flex flex-wrap p-5 text-2xl font-bold text-black/20 md:p-8 md:text-3xl lg:p-10 lg:text-4xl xl:text-5xl"
           }
         >
           {words.map((word, i) => {
@@ -44,6 +46,17 @@ export const TextRevealByWord: FC<TextRevealByWordProps> = ({
             );
           })}
         </p>
+        <AnimatedGridPattern
+          numSquares={30}
+          maxOpacity={0.1}
+          duration={3}
+          repeatDelay={1}
+          className={cn(
+            "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
+            "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12"
+          )}
+        />
+        <CircleChevronDown className="animate-bounce" size={32} />
       </div>
     </div>
   );
