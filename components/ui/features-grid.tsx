@@ -11,7 +11,7 @@ const features = [
     href: "/",
     cta: "Learn more",
     background: (
-      <BeamIllustration className="absolute right-2 top-4 h-[300px] w-[600px] border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] group-hover:scale-105" />
+      <BeamIllustration className="absolute top-0 left-0 md:left-10 md:top-2 w-[300px] h-auto md:h-[300px] md:w-[600px] border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] group-hover:scale-105" />
     ),
     className: "col-span-3 lg:col-span-2 text-lg",
   },

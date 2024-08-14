@@ -81,19 +81,19 @@ const companyData = [
 
 export default function Metrics() {
   return (
-    <div className="relative overflow-hidden h-[576px] w-full flex lg:py-20">
+    <div className="relative overflow-hidden py-10 lg:h-[576px] w-full flex lg:py-20">
       <Marquee pauseOnHover className="[--duration:20s]">
         {companyData.map((data) => (
           <MagicCard
             key={data.metric}
-            className="cursor-pointer flex flex-col p-10 shadow-2xl whitespace-nowrap min-w-72"
+            className="cursor-pointer flex flex-col p-10 shadow-2xl whitespace-nowrap min-w-60 lg:min-w-72"
             gradientColor="#262626"
           >
-            <div className="max-w-40 aspect-video">
+            <div className="max-w-24 md:max-w-40 aspect-video">
               <Image src={data.logo} alt="company-logo" />
             </div>
             <div className="my-auto">
-              <p className="text-5xl font-bold tracking-tighter text-primary flex items-center gap-3">
+              <p className="text-3xl lg:text-5xl font-bold tracking-tighter text-primary flex items-center gap-3">
                 <span>
                   <NumberTicker value={data.number} />
                   {data.unit}
@@ -106,7 +106,7 @@ export default function Metrics() {
                   )}
                 </span>
               </p>
-              <p className="text-2xl font-medium pt-2 text-neutral-300">
+              <p className="text-xl md:text-2xl font-medium pt-2 text-neutral-300">
                 {data.metric}
               </p>
             </div>
