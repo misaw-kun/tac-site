@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { cn } from "@/lib/utils";
 import "./globals.css";
 import "./styles.css";
-import { share_tech } from "./fonts";
 import localFont from "next/font/local";
+import { Webchat, WebchatProvider } from "@botpress/webchat";
 
 export const metadata: Metadata = {
   title: "The Automation Co.",

@@ -14,9 +14,9 @@ import FeaturesGrid from "@/components/ui/features-grid";
 import DotPattern from "@/components/magicui/dot-pattern";
 import Metrics from "@/components/ui/metrics";
 import Meteors from "@/components/magicui/meteors";
-import CalendlyPopup from "@/components/ui/calendly-popup";
 import AiPoweredOne from "@/app/assets/ai-sched-1.png";
 import AiPoweredSm from "@/app/assets/ai-sched-sm.png";
+import CalPopup from "@/components/ui/cal-popup";
 
 export default function Home() {
   return (
@@ -24,7 +24,7 @@ export default function Home() {
       <header className="py-8 lg:py-12 w-full">
         <div className="flex items-center justify-between">
           <Image src={Logo} alt="brand-logo" />
-          <CalendlyPopup btnText="Contact Us" isHeader />
+          <CalPopup btnText="Contact Us" isHeader />
         </div>
       </header>
       <main className="snap-y flex flex-col justify-between">
@@ -50,7 +50,7 @@ export default function Home() {
               className="text-center mt-3 bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent min-h-32"
             />
           </h1>
-          <CalendlyPopup btnText="Start Automating" isHeader={false} />
+          <CalPopup btnText="Start Automating" isHeader={false} />
           <Particles
             className="absolute inset-0"
             quantity={256}
@@ -186,7 +186,7 @@ export default function Home() {
             </AnimatedShinyText>
           </h2>
         </div>
-        <CalendlyPopup btnText="Book A Call" isHeader={false} />
+        <CalPopup btnText="Book A Call" isHeader={false} />
         <Meteors number={30} />
       </footer>
     </BlurFade>
