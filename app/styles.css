@@ -1,0 +1,21 @@
+@media only screen and (max-width: 480px) {
+  .bpFabContainer {
+    bottom: 0 !important;
+    right: 0 !important;
+  }
+  .bot-sm {
+    min-width: 320px !important;
+    width: 100% !important;
+    bottom: 0 !important;
+    right: 0 !important;
+    height: 75vh !important;
+  }
+}
+
+.bpFabIcon {
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWJvdC1tZXNzYWdlLXNxdWFyZSI+PHBhdGggZD0iTTEyIDZWMkg4Ii8+PHBhdGggZD0ibTggMTgtNCA0VjhhMiAyIDAgMCAxIDItMmgxMmEyIDIgMCAwIDEgMiAydjhhMiAyIDAgMCAxLTIgMloiLz48cGF0aCBkPSJNMiAxMmgyIi8+PHBhdGggZD0iTTkgMTF2MiIvPjxwYXRoIGQ9Ik0xNSAxMXYyIi8+PHBhdGggZD0iTTIwIDEyaDIiLz48L3N2Zz4=")
+    no-repeat center center !important;
+  background-color: #fafafa !important;
+  border-radius: 25% !important;
+  background-size: 2.5em !important;
+}

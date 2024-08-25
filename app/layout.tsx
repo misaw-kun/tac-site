@@ -3,7 +3,9 @@ import { cn } from "@/lib/utils";
 import "./globals.css";
 import "./styles.css";
 import localFont from "next/font/local";
-import { Webchat, WebchatProvider } from "@botpress/webchat";
+import Embed from "@/components/botpress/embed";
+
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "The Automation Co.",
@@ -29,6 +31,7 @@ export default function RootLayout({
         )}
       >
         <div id="__next">{children}</div>
+        <Embed />
       </body>
     </html>
   );
