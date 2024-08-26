@@ -24,7 +24,7 @@ export function TacWhyUs() {
           </h2>
           <Image src={Bespoke} alt="bespoke-service" className="mb-5" />
           <h4 className="text-normal md:text-2xl font-normal tracking-tight text-neutral-300">
-            No two businesses are alike, that's why we believe in working
+            No two businesses are alike, that&apos;s why we believe in working
             closely with you to develop custom solutions as opposed to the
             cookie cutter method.
           </h4>
