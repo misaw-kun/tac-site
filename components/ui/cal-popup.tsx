@@ -4,13 +4,16 @@ import { useEffect } from "react";
 import { Button } from "./button";
 import ShimmerButton from "../magicui/shimmer-button";
 import { BotMessageSquare } from "lucide-react";
+import PulsatingButton from "./pulsating-button";
 
 export default function CalPopup({
   btnText,
-  isHeader,
+  isHeader = false,
+  isPromo = false,
 }: {
   btnText: string;
-  isHeader: boolean;
+  isHeader?: boolean;
+  isPromo?: boolean;
 }) {
   useEffect(() => {
     (async function () {
@@ -23,6 +26,17 @@ export default function CalPopup({
       });
     })();
   }, []);
+  if (isPromo) {
+    return (
+      <PulsatingButton
+        className="text-sm md:text-3xl font-semibold z-20"
+        pulseColor="#00ff7a"
+        data-cal-link="tacai"
+      >
+        {btnText}
+      </PulsatingButton>
+    );
+  }
   return (
     <>
       {isHeader ? (

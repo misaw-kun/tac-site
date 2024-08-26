@@ -4,6 +4,7 @@ import "./globals.css";
 import "./styles.css";
 import localFont from "next/font/local";
 import Embed from "@/components/botpress/embed";
+import { jetbrains } from "./fonts";
 
 export const dynamic = "force-dynamic";
 
@@ -27,11 +28,12 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased container lg:max-w-screen-lg xl:max-w-screen-xl overscroll-none scroll-smooth",
-          satoshi.variable
+          satoshi.variable,
+          jetbrains.variable
         )}
       >
         <div id="__next">{children}</div>
-        <Embed />
+        {/* <Embed /> */}
       </body>
     </html>
   );

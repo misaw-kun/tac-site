@@ -129,6 +129,28 @@ const config = {
           "0%": { backgroundPosition: "top center" },
           "100%": { backgroundPosition: "bottom center" },
         },
+        "border-beam": {
+          "100%": {
+            "offset-distance": "100%",
+          },
+        },
+        gradient: {
+          to: {
+            backgroundPosition: "var(--bg-size) 0",
+          },
+        },
+        ripple: {
+          "0%, 100%": {
+            transform: "translate(-50%, -50%) scale(1)",
+          },
+          "50%": {
+            transform: "translate(-50%, -50%) scale(0.9)",
+          },
+        },
+        pulse: {
+          "0%, 100%": { boxShadow: "0 0 0 0 var(--pulse-color)" },
+          "50%": { boxShadow: "0 0 0 8px var(--pulse-color)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -141,6 +163,10 @@ const config = {
         "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
         backgroundPositionSpin:
           "background-position-spin 3000ms infinite alternate",
+        "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
+        gradient: "gradient 8s linear infinite",
+        ripple: "ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite",
+        pulse: "pulse var(--duration) ease-out infinite",
       },
     },
   },

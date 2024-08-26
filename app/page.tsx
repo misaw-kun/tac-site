@@ -1,5 +1,4 @@
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
 import { CalendarCheck, MessagesSquare } from "lucide-react";
 import GridPattern from "@/components/ui/grid-pattern";
 import AnimatedShinyText from "@/components/magicui/animated-shiny-text";
