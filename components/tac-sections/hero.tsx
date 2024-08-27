@@ -22,7 +22,7 @@ function TacHero() {
             "increases efficiency",
             "adapt to your needs",
             "boosts revenue",
-            "runs 24/7",
+            "run 24/7",
           ]}
           className="text-center mt-3 bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent min-h-32"
         />
