@@ -6,6 +6,7 @@ import CalPopup from "@/components/ui/cal-popup";
 import Link from "next/link";
 import Video from "next-video";
 import { ArrowUpRight, SquareArrowOutUpRight } from "lucide-react";
+import { NeonGradientCard } from "@/components/magicui/neon-gradient-card";
 
 export default function Page() {
   return (
@@ -38,8 +39,21 @@ export default function Page() {
             }}
           ></iframe>
         </div>
+        {/* promise */}
+        <NeonGradientCard
+          neonColors={{
+            firstColor: "#00ff7a",
+            secondColor: "#5100ff",
+          }}
+          className="max-w-xs md:max-w-4xl mx-auto items-center justify-center text-center md:mt-40"
+        >
+          <span className="pointer-events-none z-10 h-full whitespace-pre-wrap bg-gradient-to-r from-secondary from-35% to-accent bg-clip-text text-center text-xl md:text-5xl font-bold leading-tight tracking-tighter text-transparent dark:drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">
+            book a call to learn how we can increase your conversions by upto
+            30% <br /> (or we work for free!)
+          </span>
+        </NeonGradientCard>
         {/* cta */}
-        <div className="flex md:gap-12 items-center md:items-baseline justify-center md:flex-row flex-col mx-16 md:mx-auto p-4 md:p-24 w-full z-20">
+        <div className="flex md:gap-12 items-center md:items-baseline justify-center md:flex-row flex-col mx-16 md:mx-auto p-4 md:p-24 md:pb-8 w-full z-20">
           <CalPopup isPromo={true} btnText="Book A Free Consultation Call" />
           <Link
             href="/healthcare"
