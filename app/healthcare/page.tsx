@@ -210,7 +210,7 @@ export default function Page() {
         <TacMetrics />
         {/* CTA */}
       </main>
-      <TacFooter />
+      <TacFooter isPromo />
     </BlurFade>
   );
 }

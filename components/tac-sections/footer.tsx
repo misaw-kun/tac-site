@@ -2,8 +2,11 @@ import React from "react";
 import AnimatedShinyText from "../magicui/animated-shiny-text";
 import CalPopup from "../ui/cal-popup";
 import Meteors from "../magicui/meteors";
+import Link from "next/link";
+import ShimmerButton from "../magicui/shimmer-button";
+import { SquareArrowOutUpRight } from "lucide-react";
 
-function TacFooter() {
+function TacFooter({ isPromo = false }: { isPromo: boolean }) {
   return (
     <footer className="relative py-20 lg:py-40 lg:px-16 w-full flex flex-col md:flex-row justify-between overflow-hidden min-h-72 items-center">
       <div className="z-10">
@@ -19,7 +22,21 @@ function TacFooter() {
           </AnimatedShinyText>
         </h2>
       </div>
-      <CalPopup btnText="Book A Call" isHeader={false} />
+      <div className="flex flex-col">
+        <CalPopup btnText="Book A Call" isHeader={false} />
+        {isPromo && (
+          <Link
+            href="/healthcare/promo"
+            target="_blank"
+            className="text-center text-sm font-medium leading-none tracking-tight text-white from-white to-slate-900/10 lg:text-xl z-12"
+          >
+            <ShimmerButton className="shadow-2xl mt-10 z-20 p-4 lg:p-6">
+              <SquareArrowOutUpRight className="mr-2" size={24} />
+              Learn More
+            </ShimmerButton>
+          </Link>
+        )}
+      </div>
       <Meteors number={30} />
     </footer>
   );
