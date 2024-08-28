@@ -4,9 +4,9 @@ import ShimmerButton from "@/components/magicui/shimmer-button";
 import TacHeader from "@/components/tac-sections/header";
 import CalPopup from "@/components/ui/cal-popup";
 import Link from "next/link";
-import Video from "next-video";
-import { ArrowUpRight, SquareArrowOutUpRight } from "lucide-react";
+import { SquareArrowOutUpRight } from "lucide-react";
 import { NeonGradientCard } from "@/components/magicui/neon-gradient-card";
+import VideoPlayer from "@/components/ui/video-player";
 
 export default function Page() {
   return (
@@ -22,23 +22,8 @@ export default function Page() {
             <span className="text-destructive">AI-POWERED CHATBOT</span>
           </h1>
         </div>
-        {/* embed */}
-        <div
-          className="w-full rounded-lg z-20"
-          style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}
-        >
-          <iframe
-            src="https://www.loom.com/embed/ccff505d039e409fabb342ae0cfc53d3?sid=b353ade3-67c9-44d4-a793-fab8981cb918?hideEmbedTopBar=true"
-            allowFullScreen
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-            }}
-          ></iframe>
-        </div>
+        {/* VSL */}
+        <VideoPlayer />
         {/* promise */}
         <NeonGradientCard
           neonColors={{
@@ -47,7 +32,7 @@ export default function Page() {
           }}
           className="max-w-xs md:max-w-4xl mx-auto items-center justify-center text-center md:mt-40"
         >
-          <span className="pointer-events-none z-10 h-full whitespace-pre-wrap bg-gradient-to-r from-secondary from-35% to-accent bg-clip-text text-center text-xl md:text-5xl font-bold leading-tight tracking-tighter text-transparent dark:drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">
+          <span className="pointer-events-none z-10 h-full bg-gradient-to-r from-secondary from-35% to-accent bg-clip-text text-center text-xl md:text-6xl font-bold leading-none tracking-tighter text-transparent dark:drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">
             book a call to learn how we can increase your conversions by upto
             30% <br /> (or we work for free!)
           </span>
