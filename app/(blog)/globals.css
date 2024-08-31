@@ -1,0 +1,40 @@
+@config "../../tailwind.blog.config.ts";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Set by you */
+    --background: 0, 0%, 0%; /* Black */
+    --foreground: 0, 0%, 100%; /* White */
+    --accent: 142, 100%, 48%; /* Electric Green */
+    --secondary: 143, 100%, 75%; /* Bright Green */
+    --destructive: 259, 100%, 50%; /* Bright Purple */
+
+    /* Modified to complement your colors */
+    --card: 0, 0%, 15%; /* Dark Grey */
+    --card-foreground: 0, 0%, 85%; /* Light Grey */
+    --popover: 0, 0%, 10%; /* Very Dark Grey */
+    --popover-foreground: 0, 0%, 90%; /* Very Light Grey */
+    --primary: 142, 100%, 48%; /* Match Accent (Electric Green) */
+    --primary-foreground: 0, 0%, 100%; /* White */
+    --secondary-foreground: 0, 0%, 10%; /* Very Dark Grey */
+    --muted: 142, 100%, 96%; /* Light Green (Pale) */
+    --muted-foreground: 142, 100%, 25%; /* Dark Green */
+    --accent-foreground: 0, 0%, 10%; /* Very Dark Grey */
+    --destructive-foreground: 0, 0%, 100%; /* White */
+    --border: 0, 0%, 30%; /* Medium Grey */
+    --input: 0, 0%, 20%; /* Dark Grey */
+    --ring: 143, 100%, 75%; /* Match Secondary (Bright Green) */
+    --radius: 0.5rem; /* No change */
+
+    /* Updated Chart Colors */
+    --chart-1: 259, 100%, 50%; /* Match Destructive (Bright Purple) */
+    --chart-2: 142, 100%, 48%; /* Match Accent (Electric Green) */
+    --chart-3: 43, 100%, 66%; /* Bright Yellow */
+    --chart-4: 27, 100%, 67%; /* Bright Orange */
+    --chart-5: 197, 63%, 48%; /* Teal Blue */
+  }
+}
