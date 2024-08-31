@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { cn } from "@/lib/utils";
-import "../globals.css";
-import "../styles.css";
+import "./globals.css";
+import "./styles.css";
 import localFont from "next/font/local";
 import Embed from "@/app/components/botpress/embed";
 import { jetbrains } from "@/app/fonts";

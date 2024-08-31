@@ -7,6 +7,7 @@ import Container from "@/app/(blog)/_components/container";
 import Header from "@/app/(blog)/_components/header";
 import { PostBody } from "@/app/(blog)/_components/post-body";
 import { PostHeader } from "@/app/(blog)/_components/post-header";
+import BlurFade from "@/app/components/magicui/blur-fade";
 
 export default async function Post({ params }: Params) {
   const post = getPostBySlug(params.slug);
@@ -19,18 +20,20 @@ export default async function Post({ params }: Params) {
 
   return (
     <main>
-      <Container>
-        <Header />
-        <article className="mb-32">
-          <PostHeader
-            title={post.title}
-            coverImage={post.coverImage}
-            date={post.date}
-            author={post.author}
-          />
-          <PostBody content={content} />
-        </article>
-      </Container>
+      <BlurFade>
+        <Container>
+          <Header />
+          <article className="mb-32">
+            <PostHeader
+              title={post.title}
+              coverImage={post.coverImage}
+              date={post.date}
+              author={post.author}
+            />
+            <PostBody content={content} />
+          </article>
+        </Container>
+      </BlurFade>
     </main>
   );
 }

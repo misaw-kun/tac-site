@@ -1,3 +1,4 @@
+"use client";
 import Avatar from "./avatar";
 import CoverImage from "./cover-image";
 import { type Author } from "@/interfaces/author";

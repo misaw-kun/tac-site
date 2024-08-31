@@ -2,6 +2,7 @@ import Container from "@/app/(blog)/_components/container";
 import { HeroPost } from "@/app/(blog)/_components/hero-post";
 import { Intro } from "@/app/(blog)/_components/intro";
 import { MoreStories } from "@/app/(blog)/_components/more-stories";
+import BlurFade from "@/app/components/magicui/blur-fade";
 import { getAllPosts } from "@/lib/api";
 
 export default function Index() {
@@ -12,7 +13,7 @@ export default function Index() {
   const morePosts = allPosts.slice(1);
 
   return (
-    <>
+    <BlurFade>
       <Container>
         <Intro />
         <HeroPost
@@ -25,6 +26,6 @@ export default function Index() {
         />
         {morePosts.length > 0 && <MoreStories posts={morePosts} />}
       </Container>
-    </>
+    </BlurFade>
   );
 }
