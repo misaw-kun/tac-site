@@ -16,8 +16,6 @@ export default async function Post({ params }: Params) {
     return notFound();
   }
 
-  const content = await markdownToHtml(post.content || "");
-
   return (
     <main>
       <BlurFade>
@@ -30,7 +28,7 @@ export default async function Post({ params }: Params) {
               date={post.date}
               author={post.author}
             />
-            <PostBody content={content} />
+            <PostBody content={post.content} />
           </article>
         </Container>
       </BlurFade>

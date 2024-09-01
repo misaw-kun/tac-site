@@ -14,18 +14,23 @@ export default function Index() {
 
   return (
     <BlurFade>
-      <Container>
-        <Intro />
-        <HeroPost
-          title={heroPost.title}
-          coverImage={heroPost.coverImage}
-          date={heroPost.date}
-          author={heroPost.author}
-          slug={heroPost.slug}
-          excerpt={heroPost.excerpt}
-        />
-        {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-      </Container>
+      <div className="min-h-screen w-full bg-black flex-col bg-grid-white/[0.2] relative flex items-center justify-center">
+        <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+        <div className="relative z-20">
+          <Container>
+            <Intro />
+            <HeroPost
+              title={heroPost.title}
+              coverImage={heroPost.coverImage}
+              date={heroPost.date}
+              author={heroPost.author}
+              slug={heroPost.slug}
+              excerpt={heroPost.excerpt}
+            />
+            {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+          </Container>
+        </div>
+      </div>
     </BlurFade>
   );
 }

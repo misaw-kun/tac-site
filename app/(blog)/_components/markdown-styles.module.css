@@ -1,18 +1,106 @@
-.markdown {
-  @apply text-lg leading-relaxed;
+/* Responsive Text for Small Screens */
+@media (max-width: 480px) {
+  .markdown {
+    @apply text-lg leading-relaxed !important;
+  }
 }
 
+/* Base Markdown Styles */
+.markdown {
+  @apply text-neutral-300; /* Maintain the neutral text color */
+  @apply text-xl leading-loose; /* Base font size and line height */
+}
+
+/* Paragraphs, Lists, Blockquotes */
 .markdown p,
 .markdown ul,
 .markdown ol,
 .markdown blockquote {
-  @apply my-6;
+  @apply my-6 mr-3 p-1; /* Margin adjustments */
 }
 
+/* Headings */
 .markdown h2 {
-  @apply text-3xl mt-12 mb-4 leading-snug;
+  @apply text-3xl mt-12 mb-4 leading-snug; /* Main heading style */
+  @apply font-semibold text-white; /* Add some font-weight and color */
 }
 
 .markdown h3 {
-  @apply text-2xl mt-8 mb-4 leading-snug;
+  @apply text-2xl mt-8 mb-4 leading-snug; /* Subheading style */
+  @apply font-semibold text-neutral-200; /* Slightly lighter text color */
+}
+
+/* Links */
+.markdown a {
+  @apply text-accent underline font-medium; /* Accent color, underline, medium weight */
+}
+
+.markdown a:hover {
+  @apply text-primary; /* Change color on hover */
+}
+
+/* Blockquotes */
+.markdown blockquote {
+  @apply border-l-4 pl-4 bg-neutral-800 text-neutral-400; /* Bold border, padding, and italic text */
+  @apply border-accent; /* Accent border color */
+}
+
+/* Code Blocks */
+.markdown pre {
+  @apply bg-neutral-900 text-neutral-200 p-4 rounded-lg overflow-x-auto; /* Dark background, light text, padding, and rounded corners */
+}
+
+.markdown code {
+  @apply bg-neutral-800 text-neutral-200 px-2 py-1 rounded font-mono; /* Inline code styling */
+}
+
+/* Lists */
+.markdown ul,
+.markdown ol {
+  @apply pl-6; /* Padding for list items */
+}
+
+.markdown ul li {
+  @apply relative pl-8; /* Adjust padding to leave space for the custom bullet */
+}
+
+.markdown ul li::before {
+  content: "";
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMGZmN2EiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1tb3ZlLXJpZ2h0Ij48cGF0aCBkPSJNMTggOEwyMiAxMkwxOCAxNiIvPjxwYXRoIGQ9Ik0yIDEySDIyIi8+PC9zdmc+");
+  background-size: 1rem;
+  width: 1rem;
+  height: 1rem;
+  position: absolute; /* Position it absolutely */
+  left: 0; /* Align to the left */
+  top: 1rem; /* Center vertically */
+  transform: translateY(-23.25%);
+}
+
+.markdown ul li,
+.markdown ol li {
+  @apply mb-2; /* Spacing between list items */
+}
+
+/* Images */
+.markdown img {
+  @apply rounded-lg shadow-lg mb-6; /* Rounded corners and shadow for images */
+}
+
+/* Tables */
+.markdown table {
+  @apply w-full border-collapse my-6; /* Full width, collapse borders, and spacing */
+}
+
+.markdown th,
+.markdown td {
+  @apply p-3 border border-neutral-700; /* Padding and border styling */
+}
+
+.markdown th {
+  @apply bg-neutral-800 font-semibold; /* Darker background for table headers */
+}
+
+/* Horizontal Rule */
+.markdown hr {
+  @apply border-0 h-px bg-neutral-700 my-8; /* Thin horizontal rule */
 }
