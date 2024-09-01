@@ -19,18 +19,23 @@ export default async function Post({ params }: Params) {
   return (
     <main>
       <BlurFade>
-        <Container>
-          <Header />
-          <article className="mb-32">
-            <PostHeader
-              title={post.title}
-              coverImage={post.coverImage}
-              date={post.date}
-              author={post.author}
-            />
-            <PostBody content={post.content} />
-          </article>
-        </Container>
+        <div className="min-h-screen w-full bg-black flex-col bg-grid-small-white/[0.4] relative flex items-center justify-center">
+          <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+          <div className="relative z-20">
+            <Container>
+              <Header />
+              <article className="mb-32">
+                <PostHeader
+                  title={post.title}
+                  coverImage={post.coverImage}
+                  date={post.date}
+                  author={post.author}
+                />
+                <PostBody content={post.content} />
+              </article>
+            </Container>
+          </div>
+        </div>
       </BlurFade>
     </main>
   );

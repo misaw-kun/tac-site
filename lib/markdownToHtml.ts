@@ -6,10 +6,10 @@ export default async function markdownToHtml(markdown: string) {
   const result = await remark()
     .use(() => (tree) => {
       // Visit each heading node
-      visit(tree, "heading", (node) => {
+      visit(tree, "heading", (node: any) => {
         // Create an ID based on the text content
         const id = node.children
-          .map((child) => child.value)
+          .map((child: any) => child.value)
           .join("-")
           .toLowerCase()
           .replace(/[^\w]+/g, "");
