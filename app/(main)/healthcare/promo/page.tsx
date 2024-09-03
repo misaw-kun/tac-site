@@ -7,6 +7,7 @@ import Link from "next/link";
 import { SquareArrowOutUpRight } from "lucide-react";
 import { NeonGradientCard } from "@/app/components/magicui/neon-gradient-card";
 import VideoPlayer from "@/app/components/ui/video-player";
+import { Metadata } from "next";
 
 export default function Page() {
   return (
@@ -65,3 +66,40 @@ export default function Page() {
     </BlurFade>
   );
 }
+
+export const metadata: Metadata = {
+  title: "Healthcare AI Solutions | The Automation Co.",
+  description:
+    "Discover our AI-powered solutions tailored for healthcare. Watch the video to learn how we can revolutionize your practice.",
+  openGraph: {
+    title: "Transform Your Healthcare Practice with AI",
+    description:
+      "Watch the video to see how our AI solutions can optimize your healthcare operations.",
+    url: "https://theautomationcompany.tech/healthcare/promo",
+    siteName: "The Automation Co.",
+    images: [
+      {
+        url: "https://res.cloudinary.com/dx6mylv5z/image/upload/v1724836973/vsl_thumb_jxmxuo.png",
+        width: 1200,
+        height: 630,
+        alt: "AI Solutions Video",
+      },
+    ],
+    locale: "en_US",
+    type: "video.movie", // If you have a video file or a video URL, this can be specific to a video type
+    videos: {
+      url: "https://res.cloudinary.com/dx6mylv5z/video/upload/v1724830394/vsl_healthcare_miexav.mp4",
+      width: 1200,
+      height: 630,
+    },
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@yourtwitterhandle",
+    creator: "@yourtwitterhandle",
+    title: "AI Solutions for Healthcare",
+    description:
+      "Unlock Higher Conversions and Better Patient Support with our AI-Powered Chatbots",
+    images: ["/images/healthcare-promo-twitter.jpg"],
+  },
+};

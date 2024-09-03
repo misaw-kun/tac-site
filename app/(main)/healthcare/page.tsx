@@ -17,6 +17,7 @@ import AnimatedShinyText from "@/app/components/magicui/animated-shiny-text";
 import { MagicCard } from "@/app/components/magicui/magic-card";
 import SparklesText from "@/app/components/magicui/sparkles-text";
 import { TacWhyUs } from "@/app/components/tac-sections/why-us";
+import { Metadata } from "next";
 export default function Page() {
   return (
     <BlurFade delay={0.25} inView={true}>
@@ -214,3 +215,26 @@ export default function Page() {
     </BlurFade>
   );
 }
+
+export const metadata: Metadata = {
+  title: "The Automation Co.",
+  description: "AI-powered solutions for healthcare, and more.",
+  openGraph: {
+    title: "The Automation Co. | Healthcare",
+    description: "AI-powered solutions tailored for healthcare.",
+    url: "https://theautomationcompany.tech/healthcare",
+    images: [
+      {
+        url: "/images/healthcare-og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Healthcare AI Solutions",
+      },
+    ],
+  },
+  twitter: {
+    title: "AI Solutions for Healthcare Professionals",
+    description: "AI-powered solutions tailored for healthcare.",
+    images: ["/images/healthcare-twitter.jpg"],
+  },
+};
