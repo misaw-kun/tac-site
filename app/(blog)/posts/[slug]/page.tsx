@@ -65,6 +65,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     openGraph: {
       title,
       description: post.excerpt,
+      type: "article",
       url: `https://theautomationcompany.tech/posts/${params.slug}`,
       images: [
         {
@@ -74,6 +75,12 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
           alt: post.title,
         },
       ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: [`/api/og?${ogParams.toString()}`],
     },
   };
 }
