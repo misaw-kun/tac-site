@@ -1,6 +1,6 @@
 "use client";
 import { TypeAnimation } from "react-type-animation";
-import Typewriter from "typewriter-effect";
+// import Typewriter from "typewriter-effect";
 
 export default function TypeEffect() {
   return (
