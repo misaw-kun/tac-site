@@ -65,7 +65,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     description: post.excerpt,
     openGraph: {
       title,
-      description: post.excerpt,
+      description: post.excerpt.slice(0, 50),
       type: "article",
       url: `https://theautomationcompany.tech/posts/${params.slug}`,
       images: [
