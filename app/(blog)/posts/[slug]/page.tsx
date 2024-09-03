@@ -62,6 +62,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 
   return {
     title,
+    description: post.excerpt,
     openGraph: {
       title,
       description: post.excerpt,
