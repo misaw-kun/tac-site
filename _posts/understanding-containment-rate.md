@@ -2,7 +2,7 @@
 title: "Understanding Containment Rate: A Key Metric for Measuring AI Chatbot Success"
 excerpt: "Did you know that over 80% of customer service chats are now handled by chatbots and AI agents? This fact shows how vital it is to measure these automated systems well. Companies have used Containment Rate to check their chatbots and virtual assistants for years. But is this metric really telling the whole story?"
 coverImage: "/assets/blog/hello-world/cover.jpg"
-date: "2020-03-16T05:35:07.322Z"
+date: "2024-09-02T06:10:20Z"
 author:
   name: Ayman Baig
   picture: "/assets/blog/authors/tim.jpeg"

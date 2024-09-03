@@ -13,6 +13,7 @@ const satoshi = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://theautomationcompany.tech/posts"),
   title: `Automating the Future | The Automation Co. Blog`,
   description:
     "Explore the cutting edge of AI and automation with The Automation Company. Our blog delivers deep dives into the latest trends, best practices, and innovations in AI-powered chatbots, voicebots, and workflow automation. Whether you're a business leader, tech enthusiast, or just curious about how AI can transform industries, we provide the knowledge and insights to help you stay ahead in the fast-evolving world of automation.",

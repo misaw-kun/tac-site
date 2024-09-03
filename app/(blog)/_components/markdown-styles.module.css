@@ -41,7 +41,7 @@
 
 /* Blockquotes */
 .markdown blockquote {
-  @apply border-l-4 pl-4 bg-neutral-800 text-neutral-400; /* Bold border, padding, and italic text */
+  @apply border-l-4 pl-4 bg-neutral-950 text-foreground font-medium; /* Bold border, padding, and italic text */
   @apply border-accent; /* Accent border color */
 }
 

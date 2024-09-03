@@ -1,8 +1,6 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAllPosts, getPostBySlug } from "@/lib/api";
-import markdownToHtml from "@/lib/markdownToHtml";
-import Alert from "@/app/(blog)/_components/alert";
 import Container from "@/app/(blog)/_components/container";
 import Header from "@/app/(blog)/_components/header";
 import { PostBody } from "@/app/(blog)/_components/post-body";
@@ -47,20 +45,35 @@ type Params = {
   };
 };
 
-export function generateMetadata({ params }: Params): Metadata {
+export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const post = getPostBySlug(params.slug);
 
   if (!post) {
     return notFound();
   }
 
-  const title = `${post.title} | Next.js Blog Example with`;
+  const ogParams = new URLSearchParams();
+  ogParams.set("title", post.title);
+  ogParams.set("excerpt", post.excerpt);
+  ogParams.set("date", post.date);
+  ogParams.set("author", post.author.name);
+
+  const title = `${post.title}`;
 
   return {
     title,
     openGraph: {
       title,
-      images: [post.ogImage.url],
+      description: post.excerpt,
+      url: `https://theautomationcompany.tech/posts/${params.slug}`,
+      images: [
+        {
+          url: `/api/og?${ogParams.toString()}`,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
     },
   };
 }

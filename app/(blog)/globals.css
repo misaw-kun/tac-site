@@ -59,8 +59,8 @@
 .sources {
   @apply mt-10; /* Margin top for spacing */
   @apply p-4; /* Padding for the sources container */
-  @apply border-l-4 border-neutral-600; /* Left border for emphasis */
-  @apply bg-neutral-900; /* Background color */
+  @apply border-l-4 border-neutral-500; /* Left border for emphasis */
+  @apply bg-neutral-950; /* Background color */
 }
 
 .sources h2 {
