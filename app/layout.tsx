@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     default: "The Automation Company",
     template: "%s | The Automation Co.",
   },
-  description: "AI-powered solutions that just work",
+  description: "AI-powered solutions that actually work",
   openGraph: {
     title: "The Automation Company",
     description:
@@ -15,10 +15,10 @@ export const metadata: Metadata = {
     siteName: "The Automation Company",
     images: [
       {
-        url: "/images/og-image.jpg", // Replace with the actual path to your Open Graph image
+        url: "https://res.cloudinary.com/dx6mylv5z/image/upload/v1725386601/main-og_xk1k0p.png",
         width: 1200,
         height: 630,
-        alt: "A depiction of AI technology in action",
+        alt: "Banner image saying 'What will you Automate?'",
       },
     ],
     locale: "en_US",
@@ -30,7 +30,12 @@ export const metadata: Metadata = {
     creator: "@theautomationco", // Update with your actual Twitter handle
     title: "The Automation Company",
     description: "Explore AI solutions that optimize your business processes.",
-    images: ["/images/twitter-image.jpg"], // Replace with the actual path to your Twitter image
+    images: [
+      {
+        url: "https://res.cloudinary.com/dx6mylv5z/image/upload/v1725386601/main-og_xk1k0p.png",
+        alt: "banner image saying 'What will you Automate?'",
+      },
+    ], // Replace with the actual path to your Twitter image
   },
 };
 
