@@ -52,7 +52,6 @@ export default function ChatbotReact({
   return (
     <WebchatProvider
       client={bpClient}
-      theme={theme}
       configuration={configuration}
       closeWindow={() => setOpen(false)}
     >

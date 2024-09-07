@@ -4,6 +4,8 @@ import "./styles.css";
 import localFont from "next/font/local";
 import Embed from "@/app/components/botpress/embed";
 import { jetbrains } from "@/app/fonts";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 // export const dynamic = "force-dynamic";
 
@@ -28,6 +30,8 @@ export default function MainLayout({
       >
         <div id="__next">{children}</div>
         {/* <Embed /> */}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
