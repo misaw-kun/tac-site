@@ -217,7 +217,7 @@ export default function Page() {
 }
 
 export const metadata: Metadata = {
-  title: "The Automation Co.",
+  // title: "The Automation Co.",
   description: "AI-powered solutions for healthcare, and more.",
   openGraph: {
     title: "The Automation Co. | Healthcare",

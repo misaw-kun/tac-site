@@ -1,6 +1,10 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+  robots: {
+    index: true,
+    follow: true,
+  },
   metadataBase: new URL("https://theautomationcompany.tech"),
   title: {
     default: "The Automation Company",

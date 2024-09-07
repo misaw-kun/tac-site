@@ -5,7 +5,7 @@ import localFont from "next/font/local";
 import Embed from "@/app/components/botpress/embed";
 import { jetbrains } from "@/app/fonts";
 
-export const dynamic = "force-dynamic";
+// export const dynamic = "force-dynamic";
 
 const satoshi = localFont({
   src: "../assets/Satoshi-Variable.woff2",

@@ -16,12 +16,16 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://theautomationcompany.tech/"),
   title: `Automating the Future | The Automation Co. Blog`,
   description:
-    "Explore the cutting edge of AI and automation with The Automation Company.Explore deep dives into the latest trends, best practices, and innovations in AI-powered chatbots, voicebots, and workflow automation.",
+    "Explore the cutting edge of AI and automation with The Automation Company where we deep dive into the latest trends, best practices, and innovations in AI-powered chatbots, voicebots, and workflow automation.",
   openGraph: {
     images: [
       "https://res.cloudinary.com/dx6mylv5z/image/upload/v1725386601/main-og_xk1k0p.png",
     ],
     url: "https://theautomationcompany.tech/posts",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

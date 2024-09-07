@@ -1,0 +1,10 @@
+# *
+User-agent: *
+Allow: /
+Allow: /api/og
+
+# Host
+Host: https://www.theautomationcompany.tech/
+
+# Sitemaps
+Sitemap: https://www.theautomationcompany.tech/sitemap.xml
