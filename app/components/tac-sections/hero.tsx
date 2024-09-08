@@ -19,9 +19,9 @@ function TacHero() {
           words={[
             "actually work",
             "set appointments",
-            "increases efficiency",
+            "increase efficiency",
             "adapt to your needs",
-            "boosts revenue",
+            "boost revenue",
             "run 24/7",
           ]}
           className="text-center mt-3 bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent min-h-32"

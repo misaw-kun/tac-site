@@ -6,6 +6,7 @@ import cn from "classnames";
 
 import "./globals.css";
 import localFont from "next/font/local";
+import TacChatV2 from "../components/botpress/tac-chat-v2";
 
 const satoshi = localFont({
   src: "../assets/Satoshi-Variable.woff2",
@@ -45,6 +46,7 @@ export default function BlogLayout({
         {/* <ThemeSwitcher /> */}
         <div className="min-h-screen">{children}</div>
         <Footer />
+        <TacChatV2 />
       </body>
     </html>
   );
