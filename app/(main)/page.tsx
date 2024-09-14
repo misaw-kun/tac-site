@@ -16,6 +16,7 @@ import TacHero from "@/app/components/tac-sections/hero";
 import TacBizDesc from "@/app/components/tac-sections/biz-desc";
 import TacScrollReveal from "@/app/components/tac-sections/scroll-reveal";
 import TacMetrics from "@/app/components/tac-sections/industry-metrics";
+import SparklesText from "../components/magicui/sparkles-text";
 
 export default function Home() {
   return (
@@ -33,17 +34,15 @@ export default function Home() {
           <div className="relative px-6 py-12 lg:px-12 lg:py-24 flex-1 self-start">
             <h3 className="text-lg md:text-2xl font-semibold text-neutral-500 flex items-center gap-2">
               <CalendarCheck className="inline w-5 md:w-7 h-auto" />
-              From manual scheduling
+              From manual handling
             </h3>
-            <BoxReveal boxColor="#fff">
-              <h2 className="text-xl md:text-3xl font-semibold pt-2 text-neutral-400 mb-12">
-                To{" "}
-                <span className="mx-auto text-neutral-200">
-                  {" "}
-                  AI-powered efficiency, in seconds.
-                </span>
-              </h2>
-            </BoxReveal>
+            <h2 className="text-xl md:text-3xl font-semibold pt-2 text-neutral-400 mb-12">
+              To{" "}
+              <SparklesText
+                className="inline mx-auto font-medium text-neutral-200  text-xl md:text-3xl"
+                text="AI-powered efficiency, in seconds."
+              />
+            </h2>
             <Image
               src={Efficiency}
               sizes="(max-width: 720px)"
@@ -62,15 +61,13 @@ export default function Home() {
               <MessagesSquare className="inline w-5 md:w-7 h-auto" />
               Cut to the chase
             </h3>
-            <BoxReveal boxColor="#fff">
-              <h2 className="text-xl md:text-3xl font-semibold pt-2 text-neutral-400 mb-10">
-                Work with us{" "}
-                <span className="mx-auto text-neutral-200">
-                  {" "}
-                  on tangible AI solutions, not buzzwords
-                </span>
-              </h2>
-            </BoxReveal>
+            <h2 className="text-xl md:text-3xl font-semibold pt-2 text-neutral-400 mb-12">
+              Work with us{" "}
+              <SparklesText
+                className="inline mx-auto font-medium text-neutral-200 text-xl md:text-3xl"
+                text="on tangible AI solutions, not buzzwords"
+              />
+            </h2>
             <Image src={TangibleAI} alt="tangible-AI-solutions" width={784} />
             <GridPattern
               width={32}

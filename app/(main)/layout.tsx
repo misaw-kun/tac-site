@@ -6,6 +6,8 @@ import localFont from "next/font/local";
 import { jetbrains } from "@/app/fonts";
 import { Metadata } from "next";
 import TacChatV2 from "../components/botpress/tac-chat-v2";
+import { FloatingDock } from "../components/aceternity/dock";
+import { links } from "../components/ui/links";
 
 // export const dynamic = "force-dynamic";
 
@@ -66,7 +68,7 @@ export default function MainLayout({
     <html lang="en" className="scroll-smooth">
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased container lg:max-w-screen-lg xl:max-w-screen-xl overscroll-none scroll-smooth",
+          "min-h-screen bg-background font-sans antialiased container lg:max-w-screen-lg xl:max-w-screen-xl overscroll-none scroll-smooth relative",
           satoshi.variable,
           jetbrains.variable
         )}
@@ -74,6 +76,11 @@ export default function MainLayout({
         <div id="__next">{children}</div>
         {/* <Embed /> */}
         <TacChatV2 />
+        <FloatingDock
+          desktopClassName="bg-neutral-950 border border-neutral-800 fixed z-10 bottom-10 left-[50%] translate-x-[-50%]"
+          mobileClassName="bg-neutral-950 border border-4 rounded-full border-destructive fixed z-10 bottom-10 left-5"
+          items={links}
+        />
       </body>
     </html>
   );
