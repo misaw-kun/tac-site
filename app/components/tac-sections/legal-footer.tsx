@@ -7,7 +7,7 @@ export default function TacLegalFooter() {
         Privacy Policy
       </Link>
       |
-      <Link className="hover:text-secondary" href="/legal/privacy-policy">
+      <Link className="hover:text-secondary" href="/legal/terms-of-service">
         Terms of Service
       </Link>
     </div>

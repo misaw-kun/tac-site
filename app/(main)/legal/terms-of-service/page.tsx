@@ -1,7 +1,12 @@
 import BlurFade from "@/app/components/magicui/blur-fade";
 import { Button } from "@/app/components/ui/button";
 import { ScrollArea } from "@/app/components/ui/scroll-area";
+import { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Terms of Service | The Automation Co.",
+};
 
 export default function Page() {
   return (
