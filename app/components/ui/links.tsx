@@ -1,14 +1,9 @@
 import {
   IconBrandFacebook,
-  IconBrandGithub,
   IconBrandInstagram,
   IconBrandLinkedin,
-  IconBrandX,
-  IconExchange,
   IconHome,
   IconMailbox,
-  IconNewSection,
-  IconTerminal2,
 } from "@tabler/icons-react";
 
 export const links = [

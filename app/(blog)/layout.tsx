@@ -1,5 +1,4 @@
 import Footer from "@/app/(blog)/_components/footer";
-import { HOME_OG_IMAGE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import cn from "classnames";
 // import { ThemeSwitcher } from "./_components/theme-switcher";
@@ -7,6 +6,9 @@ import cn from "classnames";
 import "./globals.css";
 import localFont from "next/font/local";
 import TacChatV2 from "../components/botpress/tac-chat-v2";
+import TacLegalFooter from "../components/tac-sections/legal-footer";
+import { FloatingDock } from "../components/aceternity/dock";
+import { links } from "../components/ui/links";
 
 const satoshi = localFont({
   src: "../assets/Satoshi-Variable.woff2",
@@ -46,7 +48,13 @@ export default function BlogLayout({
         {/* <ThemeSwitcher /> */}
         <div className="min-h-screen">{children}</div>
         <Footer />
+        <TacLegalFooter />
         <TacChatV2 />
+        <FloatingDock
+          desktopClassName="bg-neutral-950 border border-neutral-800 fixed z-10 bottom-10 left-[50%] translate-x-[-50%]"
+          mobileClassName="bg-neutral-950 border border-4 rounded-full border-destructive fixed z-10 bottom-10 left-5"
+          items={links}
+        />
       </body>
     </html>
   );

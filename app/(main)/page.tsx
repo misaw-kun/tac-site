@@ -1,27 +1,25 @@
 import { cn } from "@/lib/utils";
 import { CalendarCheck, MessagesSquare } from "lucide-react";
 import GridPattern from "@/app/components/ui/grid-pattern";
-import AnimatedShinyText from "@/app/components/magicui/animated-shiny-text";
 import Image from "next/image";
-import BoxReveal from "@/app/components/magicui/box-reveal";
 import BlurFade from "@/app/components/magicui/blur-fade";
 import FeaturesGrid from "@/app/components/ui/features-grid";
 import DotPattern from "@/app/components/magicui/dot-pattern";
-import Meteors from "@/app/components/magicui/meteors";
 import TangibleAI from "@/app/assets/tangible.svg";
 import Efficiency from "@/app/assets/efficiency.svg";
-import CalPopup from "@/app/components/ui/cal-popup";
 import TacHeader from "@/app/components/tac-sections/header";
 import TacHero from "@/app/components/tac-sections/hero";
 import TacBizDesc from "@/app/components/tac-sections/biz-desc";
 import TacScrollReveal from "@/app/components/tac-sections/scroll-reveal";
 import TacMetrics from "@/app/components/tac-sections/industry-metrics";
 import SparklesText from "../components/magicui/sparkles-text";
+import TacFooter from "../components/tac-sections/footer";
+import TacLegalFooter from "../components/tac-sections/legal-footer";
 
 export default function Home() {
   return (
     <BlurFade delay={0.25} inView={true}>
-      <TacHeader />
+      <TacHeader isHome />
       <main className="snap-y flex flex-col justify-between">
         {/* hero */}
         <TacHero />
@@ -95,23 +93,8 @@ export default function Home() {
         <TacMetrics />
         {/* CTA */}
       </main>
-      <footer className="relative py-20 lg:py-40 lg:px-16 w-full flex flex-col md:flex-row justify-between overflow-hidden min-h-72 items-center">
-        <div className="z-10">
-          <h1 className="font-bold text-3xl lg:text-6xl tracking-normal mb-5 bg-gradient-to-b from-secondary to-accent bg-clip-text text-transparent">
-            Ready to Automate?
-          </h1>
-          <h2 className="text-xl text-center md:text-left md:text-3xl font-semibold tracking-tight text-neutral-500">
-            <AnimatedShinyText
-              className="max-w-full transition ease-out"
-              shimmerWidth={200}
-            >
-              For businesses of the future
-            </AnimatedShinyText>
-          </h2>
-        </div>
-        <CalPopup btnText="Book A Call" isHeader={false} />
-        <Meteors number={30} />
-      </footer>
+      <TacFooter />
+      <TacLegalFooter />
     </BlurFade>
   );
 }

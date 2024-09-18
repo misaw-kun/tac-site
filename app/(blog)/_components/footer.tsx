@@ -1,5 +1,4 @@
 import Container from "@/app/(blog)/_components/container";
-import { EXAMPLE_PATH } from "@/lib/constants";
 import { BackgroundBeams } from "./bg-beams";
 import Link from "next/link";
 import WordRotate from "@/app/components/magicui/word-rotate";

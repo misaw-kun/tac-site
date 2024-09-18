@@ -6,7 +6,7 @@ import Link from "next/link";
 import ShimmerButton from "../magicui/shimmer-button";
 import { SquareArrowOutUpRight } from "lucide-react";
 
-function TacFooter({ isPromo = false }: { isPromo: boolean }) {
+function TacFooter({ isPromo = false }: { isPromo?: boolean }) {
   return (
     <footer className="relative py-20 lg:py-40 lg:px-16 w-full flex flex-col md:flex-row justify-between overflow-hidden min-h-72 items-center">
       <div className="z-10">

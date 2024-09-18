@@ -168,7 +168,10 @@ function IconContainer({
   const [hovered, setHovered] = useState(false);
 
   return (
-    <Link href={href} target="_blank">
+    <Link
+      href={href}
+      target={title === "Blog" || title === "Home" ? "_self" : "_blank"}
+    >
       <motion.div
         ref={ref}
         style={{ width, height }}

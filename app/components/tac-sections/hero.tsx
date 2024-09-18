@@ -2,9 +2,7 @@ import React from "react";
 import AnimatedShinyText from "../magicui/animated-shiny-text";
 import WordRotate from "../magicui/word-rotate";
 import CalPopup from "../ui/cal-popup";
-import Particles from "../magicui/particles";
 import { Spotlight } from "../aceternity/spotlight";
-import { TextHoverEffect } from "../aceternity/text-hover-effect";
 import AnimatedGridPattern from "../magicui/animated-grid-pattern";
 import { cn } from "@/lib/utils";
 
