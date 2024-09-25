@@ -94,7 +94,6 @@ export default function Home() {
         {/* CTA */}
       </main>
       <TacFooter />
-      <TacLegalFooter />
     </BlurFade>
   );
 }

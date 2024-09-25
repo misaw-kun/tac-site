@@ -3,11 +3,12 @@ import "./globals.css";
 import "./styles.css";
 import localFont from "next/font/local";
 // import Embed from "@/app/components/botpress/embed";
-import { jetbrains } from "@/app/fonts";
+import { caveat, jetbrains } from "@/app/fonts";
 import { Metadata } from "next";
 import TacChatV2 from "../components/botpress/tac-chat-v2";
 import { FloatingDock } from "../components/aceternity/dock";
 import { links } from "../components/ui/links";
+import TacLegalFooter from "../components/tac-sections/legal-footer";
 
 // export const dynamic = "force-dynamic";
 
@@ -70,7 +71,8 @@ export default function MainLayout({
         className={cn(
           "min-h-screen bg-background font-sans antialiased container lg:max-w-screen-lg xl:max-w-screen-xl overscroll-none scroll-smooth relative",
           satoshi.variable,
-          jetbrains.variable
+          jetbrains.variable,
+          caveat.variable
         )}
       >
         <div id="__next">{children}</div>
@@ -81,6 +83,7 @@ export default function MainLayout({
           mobileClassName="bg-neutral-950 border border-4 rounded-full border-destructive fixed z-10 bottom-10 left-5"
           items={links}
         />
+        <TacLegalFooter />
       </body>
     </html>
   );

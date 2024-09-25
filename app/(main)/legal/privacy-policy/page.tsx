@@ -5,7 +5,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | The Automation Co.",
+  title: "Privacy Policy",
 };
 
 export default function Page() {

@@ -23,7 +23,7 @@ export default function CalPopup({
       cal("ui", {
         theme: "dark",
         styles: {
-          branding: { brandColor: "#00cc4b" },
+          branding: { brandColor: "#00ff7a" },
         },
       });
     })();
@@ -61,10 +61,13 @@ export default function CalPopup({
       ) : (
         <ShimmerButton
           data-cal-link="tacai"
-          className="shadow-2xl mt-10 z-20 p-4 lg:p-6"
+          className="shadow-2xl"
+          shimmerColor="#00ff7a"
+          background="rgba(0,2,0,1)"
+          shimmerSize="0.1em"
         >
           <BotMessageSquare className="mr-2 h-6 w-6" />
-          <span className="text-center text-sm font-medium leading-none tracking-tight text-white from-white to-slate-900/10 lg:text-lg z-12">
+          <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white from-white to-slate-900/10 lg:text-lg p-2 z-12">
             {btnText}
           </span>
         </ShimmerButton>

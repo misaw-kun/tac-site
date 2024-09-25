@@ -1,4 +1,4 @@
-import { Signika, Share_Tech, JetBrains_Mono } from "next/font/google";
+import { Signika, Share_Tech, JetBrains_Mono, Caveat } from "next/font/google";
 import { GeistSans } from "geist/font/sans";
 
 const share_tech = Share_Tech({
@@ -13,4 +13,9 @@ const jetbrains = JetBrains_Mono({
   variable: "--font-mono",
 });
 
-export { GeistSans, share_tech, signika, jetbrains };
+const caveat = Caveat({
+  subsets: ["latin"],
+  variable: "--font-serif",
+});
+
+export { GeistSans, share_tech, signika, jetbrains, caveat };
